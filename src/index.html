@@ -1,171 +1,566 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Title</title>
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.4.1/dist/css/splide-extension-grid.min.css"
+      rel="stylesheet"
+    />
     <script src="https://api-maps.yandex.ru/v3/?apikey=45bddbfa-f01f-446f-b4b7-9eef742d2181&lang=ru_RU"></script>
-</head>
-<body>
-<header>
-    header
-</header>
+  </head>
+  <body>
+    <header>header</header>
 
-<section class="contacts">
-    <div class="container">
+    <section class="contacts">
+      <div class="container">
         <div class="breadcrumb">
-            <span class="breadcrumb__item"><a href="#">Главная</a></span>
-            <span class="breadcrumb__item">Контакты</span>
+          <span class="breadcrumb__item"><a href="#">Главная</a></span>
+          <span class="breadcrumb__item">Контакты</span>
         </div>
         <h1>Контакты</h1>
         <div id="map">
-            <div class='contacts__hint'>
-                <img alt='info-icon' src='./images/info-icon.svg'>
-                <p>Вход в офис находится на углу здания со стороны Ленинградского проспекта на пересечении с ул.
-                    Балтийская.</p>
-            </div>
-            <div class='contacts__info'>
-                <h3>Контакты</h3>
-                <div class='contacts__info__list'>
-                    <div class='contacts__info__list__row'>
-                        <div class="contacts__info__list__row__phones">
-                            <div class='contacts__info__list__row__text-block'>
-                                <a class='contacts__info__list__row__text-block__heading' href='tel:89000000000'>8-900-000-00-00</a>
-                                <p class='contacts__info__list__row__text-block__text'>Москва</p>
-                            </div>
-                            <div class='contacts__info__list__row__text-block'>
-                                <a class='contacts__info__list__row__text-block__heading' data-copy="phone"
-                                   href='tel:89000000000'>8-900-000-00-00</a>
-                                <p class='contacts__info__list__row__text-block__text'>Россия</p>
-                            </div>
-                        </div>
-                        <button class='btn-copy' data-copy='phone'></button>
-                    </div>
-
-                    <div class='contacts__info__list__row'>
-                        <div class='contacts__info__list__row__text-block'>
-                            <a class='contacts__info__list__row__text-block__heading' data-copy="mail"
-                               href='mailto:metall-market@mail'>metall-market@mail</a>
-                            <p class='contacts__info__list__row__text-block__text'>Ежедневно 9:00 — 18:00</p>
-                        </div>
-                        <button class='btn-copy' data-copy='mail'></button>
-                    </div>
-
-                    <div class='contacts__info__list__row'>
-                        <div class='contacts__info__list__row__text-block'>
-                            <p class='contacts__info__list__row__text-block__heading'>Адрес</p>
-                            <p class='contacts__info__list__row__text-block__text'>123456, г. Москва, ул. Ленина 3А,
-                                помещ. 2-7</p>
-                        </div>
-                    </div>
-
-                    <div class='contacts__info__list__row'>
-                        <div class='contacts__info__list__row__text-block'>
-                            <p class='contacts__info__list__row__text-block__heading'>Время работы</p>
-                            <p class='contacts__info__list__row__text-block__text'>Ежедневно 9:00 — 18:00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class='contacts__info__buttons'>
-                    <button class='btn-download'>
-                        <img alt='icon' src='./images/download-icon.svg'>
-                        <span class='contacts__info__buttons__item__text'>Карта проезда</span>
-                    </button>
-                    <button class='btn-phone'>
-                        <img alt='icon' src='./images/phone-icon.svg'>
-                        <span class='contacts__info__buttons__item__text'>Заказать звонок</span>
-                    </button>
-                </div>
-            </div>
-
-            <div id="map-marker">
-                <img alt="marker" src="./images/map-marker-icon.svg">
-            </div>
-        </div>
-        <div class='contacts__hint contacts__hint--media'>
-            <img alt='info-icon' src='./images/info-icon.svg'>
-            <p>Вход в офис находится на углу здания со стороны Ленинградского проспекта на пересечении с ул.
-                Балтийская.</p>
-        </div>
-        <div class='contacts__info contacts__info--media'>
+          <div class="contacts__hint">
+            <img alt="info-icon" src="./images/info-icon.svg" />
+            <p>
+              Вход в офис находится на углу здания со стороны Ленинградского
+              проспекта на пересечении с ул. Балтийская.
+            </p>
+          </div>
+          <div class="contacts__info">
             <h3>Контакты</h3>
-            <div class='contacts__info__list'>
-                <div class='contacts__info__list__row'>
-                    <div class="contacts__info__list__row__phones">
-                        <div class='contacts__info__list__row__text-block'>
-                            <a class='contacts__info__list__row__text-block__heading' href='tel:89000000000'>8-900-000-00-00</a>
-                            <p class='contacts__info__list__row__text-block__text'>Москва</p>
-                        </div>
-                        <div class='contacts__info__list__row__text-block'>
-                            <a class='contacts__info__list__row__text-block__heading' data-copy="phone"
-                               href='tel:89000000000'>8-900-000-00-00</a>
-                            <p class='contacts__info__list__row__text-block__text'>Россия</p>
-                        </div>
-                    </div>
-                    <button class='btn-copy' data-copy='phone'></button>
+            <div class="contacts__info__list">
+              <div class="contacts__info__list__row">
+                <div class="contacts__info__list__row__phones">
+                  <div class="contacts__info__list__row__text-block">
+                    <a
+                      class="contacts__info__list__row__text-block__heading"
+                      href="tel:89000000000"
+                      >8-900-000-00-00</a
+                    >
+                    <p class="contacts__info__list__row__text-block__text">
+                      Москва
+                    </p>
+                  </div>
+                  <div class="contacts__info__list__row__text-block">
+                    <a
+                      class="contacts__info__list__row__text-block__heading"
+                      data-copy="phone"
+                      href="tel:89000000000"
+                      >8-900-000-00-00</a
+                    >
+                    <p class="contacts__info__list__row__text-block__text">
+                      Россия
+                    </p>
+                  </div>
                 </div>
+                <button class="btn-copy" data-copy="phone"></button>
+              </div>
 
-                <div class='contacts__info__list__row'>
-                    <div class='contacts__info__list__row__text-block'>
-                        <a class='contacts__info__list__row__text-block__heading' data-copy="mail"
-                           href='mailto:metall-market@mail'>metall-market@mail</a>
-                        <p class='contacts__info__list__row__text-block__text'>Ежедневно 9:00 — 18:00</p>
-                    </div>
-                    <button class='btn-copy' data-copy='mail'></button>
+              <div class="contacts__info__list__row">
+                <div class="contacts__info__list__row__text-block">
+                  <a
+                    class="contacts__info__list__row__text-block__heading"
+                    data-copy="mail"
+                    href="mailto:metall-market@mail"
+                    >metall-market@mail</a
+                  >
+                  <p class="contacts__info__list__row__text-block__text">
+                    Ежедневно 9:00 — 18:00
+                  </p>
                 </div>
+                <button class="btn-copy" data-copy="mail"></button>
+              </div>
 
-                <div class='contacts__info__list__row'>
-                    <div class='contacts__info__list__row__text-block'>
-                        <p class='contacts__info__list__row__text-block__heading'>Адрес</p>
-                        <p class='contacts__info__list__row__text-block__text'>123456, г. Москва, ул. Ленина 3А,
-                            помещ. 2-7</p>
-                    </div>
+              <div class="contacts__info__list__row">
+                <div class="contacts__info__list__row__text-block">
+                  <p class="contacts__info__list__row__text-block__heading">
+                    Адрес
+                  </p>
+                  <p class="contacts__info__list__row__text-block__text">
+                    123456, г. Москва, ул. Ленина 3А, помещ. 2-7
+                  </p>
                 </div>
+              </div>
 
-                <div class='contacts__info__list__row'>
-                    <div class='contacts__info__list__row__text-block'>
-                        <p class='contacts__info__list__row__text-block__heading'>Время работы</p>
-                        <p class='contacts__info__list__row__text-block__text'>Ежедневно 9:00 — 18:00</p>
-                    </div>
+              <div class="contacts__info__list__row">
+                <div class="contacts__info__list__row__text-block">
+                  <p class="contacts__info__list__row__text-block__heading">
+                    Время работы
+                  </p>
+                  <p class="contacts__info__list__row__text-block__text">
+                    Ежедневно 9:00 — 18:00
+                  </p>
                 </div>
+              </div>
             </div>
-            <div class='contacts__info__buttons'>
-                <button class='btn-download'>
-                    <img alt='icon' src='./images/download-icon.svg'>
-                    <span class='contacts__info__buttons__item__text'>Карта проезда</span>
-                </button>
-                <button class='btn-phone'>
-                    <img alt='icon' src='./images/phone-icon.svg'>
-                    <span class='contacts__info__buttons__item__text'>Заказать звонок</span>
-                </button>
+            <div class="contacts__info__buttons">
+              <button class="btn-download">
+                <img alt="icon" src="./images/download-icon.svg" />
+                <span class="contacts__info__buttons__item__text"
+                  >Карта проезда</span
+                >
+              </button>
+              <button class="btn-phone">
+                <img alt="icon" src="./images/phone-icon.svg" />
+                <span class="contacts__info__buttons__item__text"
+                  >Заказать звонок</span
+                >
+              </button>
             </div>
+          </div>
+
+          <div id="map-marker">
+            <img alt="marker" src="./images/map-marker-icon.svg" />
+          </div>
         </div>
-    </div>
+        <div class="contacts__hint contacts__hint--media">
+          <img alt="info-icon" src="./images/info-icon.svg" />
+          <p>
+            Вход в офис находится на углу здания со стороны Ленинградского
+            проспекта на пересечении с ул. Балтийская.
+          </p>
+        </div>
+        <div class="contacts__info contacts__info--media">
+          <h3>Контакты</h3>
+          <div class="contacts__info__list">
+            <div class="contacts__info__list__row">
+              <div class="contacts__info__list__row__phones">
+                <div class="contacts__info__list__row__text-block">
+                  <a
+                    class="contacts__info__list__row__text-block__heading"
+                    href="tel:89000000000"
+                    >8-900-000-00-00</a
+                  >
+                  <p class="contacts__info__list__row__text-block__text">
+                    Москва
+                  </p>
+                </div>
+                <div class="contacts__info__list__row__text-block">
+                  <a
+                    class="contacts__info__list__row__text-block__heading"
+                    data-copy="phone"
+                    href="tel:89000000000"
+                    >8-900-000-00-00</a
+                  >
+                  <p class="contacts__info__list__row__text-block__text">
+                    Россия
+                  </p>
+                </div>
+              </div>
+              <button class="btn-copy" data-copy="phone"></button>
+            </div>
 
-</section>
+            <div class="contacts__info__list__row">
+              <div class="contacts__info__list__row__text-block">
+                <a
+                  class="contacts__info__list__row__text-block__heading"
+                  data-copy="mail"
+                  href="mailto:metall-market@mail"
+                  >metall-market@mail</a
+                >
+                <p class="contacts__info__list__row__text-block__text">
+                  Ежедневно 9:00 — 18:00
+                </p>
+              </div>
+              <button class="btn-copy" data-copy="mail"></button>
+            </div>
 
-<!--<section>-->
-<!--    <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic maxime perferendis quo.-->
-<!--        Blanditiis deleniti distinctio, dolorem minus numquam optio quia repellendus sint? Cupiditate ipsum labore,-->
-<!--        necessitatibus placeat quasi tempore!-->
-<!--    </div>-->
-<!--</section>-->
-<!--<section>-->
-<!--    <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic maxime perferendis quo.-->
-<!--        Blanditiis deleniti distinctio, dolorem minus numquam optio quia repellendus sint? Cupiditate ipsum labore,-->
-<!--        necessitatibus placeat quasi tempore!-->
-<!--    </div>-->
-<!--</section>-->
-<!--<section>-->
-<!--    <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic maxime perferendis quo.-->
-<!--        Blanditiis deleniti distinctio, dolorem minus numquam optio quia repellendus sint? Cupiditate ipsum labore,-->
-<!--        necessitatibus placeat quasi tempore!-->
-<!--    </div>-->
-<!--</section>-->
+            <div class="contacts__info__list__row">
+              <div class="contacts__info__list__row__text-block">
+                <p class="contacts__info__list__row__text-block__heading">
+                  Адрес
+                </p>
+                <p class="contacts__info__list__row__text-block__text">
+                  123456, г. Москва, ул. Ленина 3А, помещ. 2-7
+                </p>
+              </div>
+            </div>
 
+            <div class="contacts__info__list__row">
+              <div class="contacts__info__list__row__text-block">
+                <p class="contacts__info__list__row__text-block__heading">
+                  Время работы
+                </p>
+                <p class="contacts__info__list__row__text-block__text">
+                  Ежедневно 9:00 — 18:00
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__info__buttons">
+            <button class="btn-download">
+              <img alt="icon" src="./images/download-icon.svg" />
+              <span class="contacts__info__buttons__item__text"
+                >Карта проезда</span
+              >
+            </button>
+            <button class="btn-phone">
+              <img alt="icon" src="./images/phone-icon.svg" />
+              <span class="contacts__info__buttons__item__text"
+                >Заказать звонок</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer>footer</footer>
-</body>
+    <section class="slider-office splide" id="splide-1">
+      <div class="container">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide splide-1">
+              <img
+                alt=""
+                src="https://images.unsplash.com/photo-1570126618953-d437176e8c79?q=80&w=1994&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </li>
+            <li class="splide__slide splide-1">
+              <img
+                alt=""
+                src="https://images.unsplash.com/photo-1579487785973-74d2ca7abdd5?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </li>
+            <li class="splide__slide splide-1">
+              <img
+                alt=""
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </li>
+            <li class="splide__slide splide-1">Фото 04</li>
+            <li class="splide__slide splide-1">Фото 05</li>
+            <li class="splide__slide splide-1">Фото 06</li>
+            <li class="splide__slide splide-1">Фото 07</li>
+          </ul>
+        </div>
+
+        <div class="splide__footer--custom">
+          <div class="splide__footer--custom__progress">
+            <div class="splide__footer--custom__progress-bar"></div>
+          </div>
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <svg
+                fill="none"
+                height="24"
+                style="transform: scaleX(-1)"
+                viewBox="0  0  24  24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8  20L16  12L8  4"
+                  stroke="#00A55A"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 20L16 12L8 4"
+                  stroke="#00A55A"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team splide" id="splide-2">
+      <div class="container">
+        <div class="team__header">
+          <h2>Наша команда</h2>
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <svg
+                fill="none"
+                height="24"
+                style="transform: scaleX(-1)"
+                viewBox="0  0  24  24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8  20L16  12L8  4"
+                  stroke="#00A55A"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 20L16 12L8 4"
+                  stroke="#00A55A"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="team__description">
+          Металл-Маркет — это команда профессионалов, влюбленных в свое дело.
+          Уверены, что развитие компании начинается с развития ее сотрудников
+        </p>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide team__workers__item">
+              <div class="team__workers__item__image">
+                <img alt="worker" src="./images/team-0.png" />
+              </div>
+              <div class="team__workers__item__text-block">
+                <p class="team__workers__item__text-block__name">
+                  Ворончихин<br />Сергей Вячеславович
+                </p>
+                <span class="team__workers__item__text-block__position"
+                  >Директор</span
+                >
+              </div>
+            </li>
+            <li class="splide__slide team__workers__item">
+              <div class="team__workers__item__image">
+                <img alt="worker" src="./images/team-1.png" />
+              </div>
+              <div class="team__workers__item__text-block">
+                <p class="team__workers__item__text-block__name">
+                  Ситникова<br />Александра Константиновна
+                </p>
+                <span class="team__workers__item__text-block__position"
+                  >Офис менеджер</span
+                >
+              </div>
+            </li>
+            <li class="splide__slide team__workers__item">
+              <div class="team__workers__item__image">
+                <img alt="worker" src="./images/team-2.png" />
+              </div>
+              <div class="team__workers__item__text-block">
+                <p class="team__workers__item__text-block__name">
+                  Лазарева<br />Валерия Максимовна
+                </p>
+                <span class="team__workers__item__text-block__position"
+                  >Бухгалтер</span
+                >
+              </div>
+            </li>
+            <li class="splide__slide team__workers__item">
+              <div class="team__workers__item__image">
+                <img alt="worker" src="./images/team-3.png" />
+              </div>
+              <div class="team__workers__item__text-block">
+                <p class="team__workers__item__text-block__name">
+                  Наумов<br />Илья Семёнович
+                </p>
+                <span class="team__workers__item__text-block__position"
+                  >Руководитель отдела продаж</span
+                >
+              </div>
+            </li>
+            <li class="splide__slide team__workers__item">
+              <div class="team__workers__item__image">
+                <img alt="worker" src="./images/team-2.png" />
+              </div>
+              <div class="team__workers__item__text-block">
+                <p class="team__workers__item__text-block__name">
+                  Лазарева<br />Валерия Максимовна
+                </p>
+                <span class="team__workers__item__text-block__position"
+                  >Бухгалтер</span
+                >
+              </div>
+            </li>
+            <li class="splide__slide team__workers__item">
+              <div class="team__workers__item__image">
+                <img alt="worker" src="./images/team-3.png" />
+              </div>
+              <div class="team__workers__item__text-block">
+                <p class="team__workers__item__text-block__name">
+                  Наумов<br />Илья Семёнович
+                </p>
+                <span class="team__workers__item__text-block__position"
+                  >Руководитель отдела продаж</span
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="splide-2__progress">
+          <div class="splide-2__progress-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="requisites">
+      <div class="container">
+        <div class="requisites__top">
+          <div class="requisites__top__left">
+            <h2>Реквизиты</h2>
+            <p>
+              Металл-Маркет — компания, которая dolor sit amet consectetur. Ac
+              sem nisi nullam mi odio. Justo eu egestas arcu rhoncus et.
+              Eleifend morbi sit proin sed proin. Mattis purus sit malesuada in
+              praesent ac nisi convallis. Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+          <a class="requisites__top__download">
+            <div class="requisites__top__download__icon"></div>
+            <div class="requisites__top__download__text">
+              <p class="requisites__top__download__text__main">
+                Скачать реквизиты
+              </p>
+              <p class="requisites__top__download__text__label">
+                Скачать pdf файл
+              </p>
+            </div>
+          </a>
+        </div>
+        <table class="requisites__table">
+          <thead class="table__head"></thead>
+          <tbody class="table__body">
+            <tr class="table__tr">
+              <td class="table__td">Полное наименование</td>
+              <td class="table__td">
+                Металл-Маркет
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">Юридический адрес</td>
+              <td class="table__td">
+                123456, Россия, Москва, ул. Ленина, 145а, 801
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">ИНН</td>
+              <td class="table__td">
+                1234567890
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">КПП</td>
+              <td class="table__td">
+                123456789
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">ОГРН</td>
+              <td class="table__td">
+                1234567890987
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">Расчетный счет</td>
+              <td class="table__td">
+                12345678909876543210
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">Корреспондентский счет</td>
+              <td class="table__td">
+                12345678909876543210
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">БИК</td>
+              <td class="table__td">
+                123456789
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">Банк</td>
+              <td class="table__td">
+                ПАО &laquo;Сбербанк&raquo;
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td">Директор</td>
+              <td class="table__td">
+                Лебедев Кирилл Александрович
+                <img
+                  class="table__td__icon"
+                  src="./images/copy-table-icon.svg"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <a class="requisites__top__download requisites__top__download--media">
+          <div class="requisites__top__download__icon"></div>
+          <div class="requisites__top__download__text">
+            <p class="requisites__top__download__text__main">
+              Скачать реквизиты
+            </p>
+            <p class="requisites__top__download__text__label">
+              Скачать pdf файл
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer>footer</footer>
+  </body>
 </html>

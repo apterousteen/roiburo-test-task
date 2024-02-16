@@ -1,6 +1,4 @@
 export const initMap = async () => {
-  const initialCoords = [37.614227, 55.767011];
-
   await ymaps3.ready;
 
   const { YMap, YMapMarker, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } =
@@ -8,7 +6,7 @@ export const initMap = async () => {
 
   const map = new YMap(document.getElementById('map'), {
     location: {
-      center: initialCoords,
+      center: [37.559451, 55.76172],
       zoom: 12,
     },
   });
@@ -16,7 +14,7 @@ export const initMap = async () => {
   const markerEl = document.getElementById('map-marker');
   const marker = new YMapMarker(
     {
-      coordinates: initialCoords,
+      coordinates: [37.614227, 55.767011],
     },
     markerEl
   );

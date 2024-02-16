@@ -1,0 +1,87 @@
+.requisites__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 56px;
+
+  &__left {
+    max-width: 1144px;
+
+    h2 {
+      font-size: 48px;
+      font-weight: $semibold;
+      margin: 0 0 32px;
+    }
+
+    p {
+      color: $gray400;
+      font-size: 18px;
+      font-weight: $regular;
+    }
+  }
+
+  &__download {
+    padding: 24px 32px 24px 24px;
+    background-color: $uigray-1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+
+    &__icon {
+      width: 56px;
+      height: 56px;
+      background: $primary100 url('../images/download-icon.svg') no-repeat
+        center;
+      margin-right: 24px;
+    }
+
+    &__text {
+      &__main {
+        margin-bottom: 4px;
+        font-weight: $semibold;
+        font-size: 20px;
+      }
+
+      &__label {
+        color: $gray400;
+      }
+    }
+  }
+}
+
+.requisites__table {
+  width: 1144px;
+  border-spacing: 0;
+}
+
+.table__tr {
+  .table__td:first-of-type {
+    font-weight: $semibold;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $uigray-1;
+    cursor: pointer;
+
+    .table__td__icon {
+      opacity: 1;
+    }
+  }
+}
+
+.table__td {
+  padding: 16px 32px;
+  border: 1px solid $gray300;
+
+  &__icon {
+    float: right;
+    opacity: 0;
+  }
+}
+
+.requisites__top__download--media {
+  display: none;
+  margin-top: 40px;
+}

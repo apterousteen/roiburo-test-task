@@ -1,5 +1,6 @@
 /* mobile */
 @media only screen and (max-width: 767px) {
+  /* base */
   section {
     margin-bottom: 64px;
   }
@@ -9,6 +10,7 @@
     margin: 0 0 32px;
   }
 
+  /* contacts */
   #map {
     height: 280px;
     margin-bottom: 24px;
@@ -81,10 +83,99 @@
       align-items: stretch;
     }
   }
+
+  /* office slider */
+  .splide {
+    &__footer--custom {
+      margin-top: 24px;
+
+      &__progress {
+        height: 4px;
+      }
+
+      &__progress-bar {
+        height: 4px;
+      }
+    }
+
+    &__slide {
+      padding: 90px 0 0;
+    }
+  }
+
+  /* workers slider */
+  .team {
+    &__header {
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 32px;
+      }
+    }
+
+    &__description {
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .splide-2__progress {
+    margin-top: 24px;
+  }
+
+  .splide-2__progress-bar {
+    height: 4px;
+  }
+
+  /* requisites */
+  .requisites__top {
+    margin-bottom: 32px;
+
+    &__left {
+      max-width: 100%;
+
+      h2 {
+        font-size: 32px;
+        margin: 0 0 20px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    &__download {
+      display: none;
+      padding: 16px 20px 16px 16px;
+    }
+
+    &__download--media {
+      display: flex;
+    }
+  }
+
+  .requisites__table {
+    width: 100%;
+  }
+
+  .table__tr {
+    .table__td:first-of-type {
+      border-right: 0;
+    }
+
+    .table__td:last-of-type {
+      border-left: 0;
+    }
+  }
+
+  .table__td {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
 }
 
 /* tablet */
-@media only screen and (min-width:  768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   section {
     margin-bottom: 100px;
   }
@@ -140,6 +231,42 @@
       margin-top: 40px;
     }
   }
+
+  /* office slider */
+  .slider-office {
+    .container {
+      margin-right: 0;
+    }
+
+    .splide__footer--custom {
+      margin-right: 36px;
+    }
+  }
+
+  /* workers slider */
+  .team {
+    &__description {
+      margin-bottom: 56px;
+    }
+  }
+
+  .requisites__top {
+    &__left {
+      max-width: 100%;
+    }
+
+    &__download {
+      display: none;
+    }
+
+    &__download--media {
+      display: flex;
+    }
+  }
+
+  .requisites__table {
+    width: 100%;
+  }
 }
 
 /* desktop */
@@ -147,11 +274,29 @@
   #map {
     height: 696px;
   }
+
+  .splide-2__progress {
+    display: none;
+  }
+
+  .requisites__top {
+    &__left {
+      max-width: 770px;
+    }
+  }
+
+  .requisites__table {
+    width: 100%;
+  }
 }
 
 /* large desktop */
 @media only screen and (min-width: 1441px) {
   #map {
     height: 728px;
+  }
+
+  .splide-2__progress {
+    display: none;
   }
 }

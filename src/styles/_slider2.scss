@@ -1,0 +1,87 @@
+.team {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 32px;
+
+    h2 {
+      margin: 0;
+      font-size: 48px;
+      font-weight: $semibold;
+    }
+  }
+
+  &__description{
+    max-width: 848px;
+    font-size: 18px;
+    font-weight: $regular;
+    margin-bottom: 40px;
+  }
+
+  &__workers {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      //height: 528px;
+      max-width: 404px;
+
+      &__image {
+        background-color: $uigray-1;
+        //height: 404px;
+        width: 100%;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+      }
+
+      &__text-block {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        gap: 8px;
+        border: 2px solid $gray300;
+        border-top: none;
+        padding: 24px 32px;
+
+        &__name {
+          font-size: $fs-body-s;
+          font-weight: $semibold;
+        }
+
+        &__position {
+          font-size: $fs-label-m;
+          font-weight: $medium;
+          color: $gray400;
+        }
+      }
+    }
+  }
+}
+
+#splide-2 .splide {
+  &__slide {
+    background-color: transparent;
+    width: auto;
+    padding: initial;
+    text-align: initial;
+    color: initial;
+  }
+}
+
+.splide-2__progress {
+  background: $gray200;
+  height: 8px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.splide-2__progress-bar {
+  background: $primary500;
+  height: 8px;
+  width: 0;
+  transition: width 400ms ease;
+}

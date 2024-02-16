@@ -4,6 +4,7 @@
 Live: https://roiburo-test-task.netlify.app/
 
 **Время выполнения:** 11 часов
+**Node:** v18.17.1
 
 ## Инструкция
 

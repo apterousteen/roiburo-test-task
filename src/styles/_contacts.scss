@@ -1,0 +1,174 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  .breadcrumb__item {
+    font-weight: $medium;
+    font-size: $fs-body-s;
+
+    a {
+      text-decoration: none;
+      color: $black-60;
+    }
+
+    &:not(:last-child)::after {
+      content: " — ";
+      color: $black-60;
+      margin: 0 16px;
+    }
+  }
+}
+
+#map {
+  width: 100%;
+  position: relative;
+  height: 696px;
+
+  canvas {
+    filter: grayscale(1);
+  }
+}
+
+#map-marker {
+  background: transparent;
+
+  img {
+    width: 40px;
+  }
+}
+
+.contacts__hint {
+  background: $gray0;
+  display: flex;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 33%;
+  padding: 32px;
+  z-index: 100;
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+  }
+
+  p {
+    margin: 0;
+    color: $gray400;
+    font-size: $fs-label-m;
+  }
+}
+
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+  background: $gray0;
+  position: absolute;
+  width: 554px;
+  top: 0;
+  bottom: 0;
+  margin: 24px;
+  padding: 56px;
+  z-index: 10;
+
+  h3 {
+    font-weight: $semibold;
+    font-size: $fs-h3;
+    color: $gray500;
+    margin: 0 0 32px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+
+      &__phones {
+        display: flex;
+        gap: 32px;
+      }
+
+      &__text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        justify-content: center;
+
+        &__heading {
+          font-weight: $semibold;
+          font-size: $fs-body-s;
+          color: $gray500;
+          text-decoration: none;
+        }
+
+        &__text {
+          font-weight: $regular;
+          font-size: $fs-body-s;
+          color: $gray400;
+          margin: 0;
+        }
+      }
+
+      .btn-copy {
+        width: 56px;
+        height: 56px;
+        border: 2px solid $gray300;
+        background: $gray0 url("../images/copy-icon-gray.svg") no-repeat center;
+
+        &:hover {
+          border-color: $primary500;
+          background: $gray0 url("../images/copy-icon-green.svg") no-repeat center;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-grow: 1;
+    gap: 24px;
+
+    button {
+      flex-grow: 1;
+      cursor: pointer;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 32px;
+      border: none;
+      gap: 12px;
+      font-weight: $medium;
+      font-size: $fs-body-s;
+
+      &.btn-download {
+        background-color: $primary100;
+        color: $primary500;
+      }
+
+      &.btn-phone {
+        background-color: $primary500;
+        color: $gray0;
+      }
+    }
+  }
+}
+
+.contacts__hint--media {
+  display: none;
+}
+
+.contacts__info--media {
+  display: none;
+}
+

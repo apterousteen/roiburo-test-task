@@ -1,0 +1,25 @@
+header {
+  background-color: $gray300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $fs-h3;
+
+  /* mobile */
+  @media only screen and (max-width: 767px) {
+    height: 56px;
+    margin-bottom: 24px;
+  }
+
+  /* tablet */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 122px;
+    margin-bottom: 32px;
+  }
+
+  /* desktop */
+  @media only screen and (min-width: 1025px) {
+    height: 216px;
+    margin-bottom: 56px;
+  }
+}

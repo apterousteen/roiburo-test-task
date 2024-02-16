@@ -1,0 +1,157 @@
+/* mobile */
+@media only screen and (max-width: 767px) {
+  section {
+    margin-bottom: 64px;
+  }
+
+  h1 {
+    font-size: $fs-h3;
+    margin: 0 0 32px;
+  }
+
+  #map {
+    height: 280px;
+    margin-bottom: 24px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 40px;
+
+    .breadcrumb__item {
+      font-size: $fs-label-s;
+
+      &:not(:last-child)::after {
+        margin: 0 8px;
+      }
+    }
+  }
+
+  .contacts__hint {
+    display: none;
+  }
+
+  .contacts__info {
+    display: none;
+  }
+
+  .contacts__hint--media {
+    display: flex;
+    position: static;
+    padding: 24px;
+    width: auto;
+    background: $uigray-1;
+    margin-bottom: 24px;
+
+    p {
+      word-break: break-word;
+    }
+  }
+
+  .contacts__info--media {
+    display: flex;
+    position: static;
+    padding: 16px;
+    margin: 0;
+    width: auto;
+    background: $uigray-1;
+
+    h3 {
+      font-size: $fs-body-l;
+    }
+
+    .contacts__info__list__row {
+      align-items: end;
+
+      &__text-block__heading {
+        font-size: $fs-label-m;
+      }
+
+      &__text-block__text {
+        font-size: $fs-label-m;
+      }
+    }
+
+    .contacts__info__list__row__phones {
+      flex-direction: column;
+    }
+
+    .contacts__info__buttons {
+      flex-direction: column;
+      margin-top: 32px;
+      align-items: stretch;
+    }
+  }
+}
+
+/* tablet */
+@media only screen and (min-width:  768px) and (max-width: 1024px) {
+  section {
+    margin-bottom: 100px;
+  }
+
+  h1 {
+    font-size: $fs-h2;
+    margin: 0 0 40px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 40px;
+
+    .breadcrumb__item {
+      font-size: $fs-body-s;
+    }
+  }
+
+  #map {
+    height: 400px;
+    margin-bottom: 32px;
+  }
+
+  .contacts__hint {
+    display: none;
+  }
+
+  .contacts__info {
+    display: none;
+  }
+
+  .contacts__hint--media {
+    display: flex;
+    position: static;
+    padding: 32px;
+    width: auto;
+    background: $uigray-1;
+    margin-bottom: 32px;
+
+    p {
+      word-break: break-word;
+    }
+  }
+
+  .contacts__info--media {
+    display: flex;
+    position: static;
+    padding: 40px 24px;
+    margin: 0;
+    width: auto;
+    background: $uigray-1;
+
+    .contacts__info__buttons {
+      margin-top: 40px;
+    }
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  #map {
+    height: 696px;
+  }
+}
+
+/* large desktop */
+@media only screen and (min-width: 1441px) {
+  #map {
+    height: 728px;
+  }
+}

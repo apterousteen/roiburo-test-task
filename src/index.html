@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Title</title>
+
+    <script src="https://api-maps.yandex.ru/v3/?apikey=45bddbfa-f01f-446f-b4b7-9eef742d2181&lang=ru_RU"></script>
+</head>
+<body>
+<header>
+    header
+</header>
+
+<section class="contacts">
+    <div class="container">
+        <div class="breadcrumb">
+            <span class="breadcrumb__item"><a href="#">Главная</a></span>
+            <span class="breadcrumb__item">Контакты</span>
+        </div>
+        <h1>Контакты</h1>
+        <div id="map">
+            <div class='contacts__hint'>
+                <img alt='info-icon' src='./images/info-icon.svg'>
+                <p>Вход в офис находится на углу здания со стороны Ленинградского проспекта на пересечении с ул.
+                    Балтийская.</p>
+            </div>
+            <div class='contacts__info'>
+                <h3>Контакты</h3>
+                <div class='contacts__info__list'>
+                    <div class='contacts__info__list__row'>
+                        <div class="contacts__info__list__row__phones">
+                            <div class='contacts__info__list__row__text-block'>
+                                <a class='contacts__info__list__row__text-block__heading' href='tel:89000000000'>8-900-000-00-00</a>
+                                <p class='contacts__info__list__row__text-block__text'>Москва</p>
+                            </div>
+                            <div class='contacts__info__list__row__text-block'>
+                                <a class='contacts__info__list__row__text-block__heading' data-copy="phone"
+                                   href='tel:89000000000'>8-900-000-00-00</a>
+                                <p class='contacts__info__list__row__text-block__text'>Россия</p>
+                            </div>
+                        </div>
+                        <button class='btn-copy' data-copy='phone'></button>
+                    </div>
+
+                    <div class='contacts__info__list__row'>
+                        <div class='contacts__info__list__row__text-block'>
+                            <a class='contacts__info__list__row__text-block__heading' data-copy="mail"
+                               href='mailto:metall-market@mail'>metall-market@mail</a>
+                            <p class='contacts__info__list__row__text-block__text'>Ежедневно 9:00 — 18:00</p>
+                        </div>
+                        <button class='btn-copy' data-copy='mail'></button>
+                    </div>
+
+                    <div class='contacts__info__list__row'>
+                        <div class='contacts__info__list__row__text-block'>
+                            <p class='contacts__info__list__row__text-block__heading'>Адрес</p>
+                            <p class='contacts__info__list__row__text-block__text'>123456, г. Москва, ул. Ленина 3А,
+                                помещ. 2-7</p>
+                        </div>
+                    </div>
+
+                    <div class='contacts__info__list__row'>
+                        <div class='contacts__info__list__row__text-block'>
+                            <p class='contacts__info__list__row__text-block__heading'>Время работы</p>
+                            <p class='contacts__info__list__row__text-block__text'>Ежедневно 9:00 — 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='contacts__info__buttons'>
+                    <button class='btn-download'>
+                        <img alt='icon' src='./images/download-icon.svg'>
+                        <span class='contacts__info__buttons__item__text'>Карта проезда</span>
+                    </button>
+                    <button class='btn-phone'>
+                        <img alt='icon' src='./images/phone-icon.svg'>
+                        <span class='contacts__info__buttons__item__text'>Заказать звонок</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="map-marker">
+                <img alt="marker" src="./images/map-marker-icon.svg">
+            </div>
+        </div>
+        <div class='contacts__hint contacts__hint--media'>
+            <img alt='info-icon' src='./images/info-icon.svg'>
+            <p>Вход в офис находится на углу здания со стороны Ленинградского проспекта на пересечении с ул.
+                Балтийская.</p>
+        </div>
+        <div class='contacts__info contacts__info--media'>
+            <h3>Контакты</h3>
+            <div class='contacts__info__list'>
+                <div class='contacts__info__list__row'>
+                    <div class="contacts__info__list__row__phones">
+                        <div class='contacts__info__list__row__text-block'>
+                            <a class='contacts__info__list__row__text-block__heading' href='tel:89000000000'>8-900-000-00-00</a>
+                            <p class='contacts__info__list__row__text-block__text'>Москва</p>
+                        </div>
+                        <div class='contacts__info__list__row__text-block'>
+                            <a class='contacts__info__list__row__text-block__heading' data-copy="phone"
+                               href='tel:89000000000'>8-900-000-00-00</a>
+                            <p class='contacts__info__list__row__text-block__text'>Россия</p>
+                        </div>
+                    </div>
+                    <button class='btn-copy' data-copy='phone'></button>
+                </div>
+
+                <div class='contacts__info__list__row'>
+                    <div class='contacts__info__list__row__text-block'>
+                        <a class='contacts__info__list__row__text-block__heading' data-copy="mail"
+                           href='mailto:metall-market@mail'>metall-market@mail</a>
+                        <p class='contacts__info__list__row__text-block__text'>Ежедневно 9:00 — 18:00</p>
+                    </div>
+                    <button class='btn-copy' data-copy='mail'></button>
+                </div>
+
+                <div class='contacts__info__list__row'>
+                    <div class='contacts__info__list__row__text-block'>
+                        <p class='contacts__info__list__row__text-block__heading'>Адрес</p>
+                        <p class='contacts__info__list__row__text-block__text'>123456, г. Москва, ул. Ленина 3А,
+                            помещ. 2-7</p>
+                    </div>
+                </div>
+
+                <div class='contacts__info__list__row'>
+                    <div class='contacts__info__list__row__text-block'>
+                        <p class='contacts__info__list__row__text-block__heading'>Время работы</p>
+                        <p class='contacts__info__list__row__text-block__text'>Ежедневно 9:00 — 18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class='contacts__info__buttons'>
+                <button class='btn-download'>
+                    <img alt='icon' src='./images/download-icon.svg'>
+                    <span class='contacts__info__buttons__item__text'>Карта проезда</span>
+                </button>
+                <button class='btn-phone'>
+                    <img alt='icon' src='./images/phone-icon.svg'>
+                    <span class='contacts__info__buttons__item__text'>Заказать звонок</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--<section>-->
+<!--    <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic maxime perferendis quo.-->
+<!--        Blanditiis deleniti distinctio, dolorem minus numquam optio quia repellendus sint? Cupiditate ipsum labore,-->
+<!--        necessitatibus placeat quasi tempore!-->
+<!--    </div>-->
+<!--</section>-->
+<!--<section>-->
+<!--    <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic maxime perferendis quo.-->
+<!--        Blanditiis deleniti distinctio, dolorem minus numquam optio quia repellendus sint? Cupiditate ipsum labore,-->
+<!--        necessitatibus placeat quasi tempore!-->
+<!--    </div>-->
+<!--</section>-->
+<!--<section>-->
+<!--    <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic maxime perferendis quo.-->
+<!--        Blanditiis deleniti distinctio, dolorem minus numquam optio quia repellendus sint? Cupiditate ipsum labore,-->
+<!--        necessitatibus placeat quasi tempore!-->
+<!--    </div>-->
+<!--</section>-->
+
+
+<footer>footer</footer>
+</body>
+</html>
